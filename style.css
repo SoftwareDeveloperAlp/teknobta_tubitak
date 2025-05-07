@@ -1,0 +1,56 @@
+/* Temel Sıfırlama */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Body Temel */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #4DB199, #ffffff);
+  color: #333;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Karanlık Mod */
+body.dark {
+  background: linear-gradient(to bottom, #4DB199, #000000);
+  color: #fff;
+}
+
+/* Konteyner */
+.container {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.5s, color 0.5s;
+}
+body:not(.dark) .container {
+  background: #fff; color: #333;
+}
+body.dark .container {
+  background: #000; color: #fff;
+}
+
+/* Başlık & Paragraf */
+h1 { margin-bottom: 1rem; }
+p  { margin-bottom: 1.5rem; transition: color 0.5s; }
+
+/* Buton */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4DB199;
+  color: #fff;
+  transition: background 0.3s;
+}
+button:hover { background: #3a8c7a; }
+body.dark button { background: #555; }
+
+/* Gizli */
+.hidden { display: none; }
